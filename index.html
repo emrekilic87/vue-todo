@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="mainTitle">Todos</h1>
+      <div class="inputArea">
+        <input
+          type="text"
+          placeholder="New"
+          v-model="newTodo"
+          v-on:keypress.enter="addTodo(newTodo)"
+        />
+        <button class="btn add" type="button" v-on:click="addTodo(newTodo)">
+          Add
+        </button>
+        <button class="btn clearAll" v-on:click="clearAll()">
+          Clear All
+        </button>
+      </div>
+      <template v-if="todos.length == 0">
+        <h2 class="">Empty</h2>
+      </template>
+      <template v-else>
+        <div class="newArea" v-for="(todo, index) in todos">
+          <span class="title">{{ todo }}</span>
+          <span class="deleteBtn" v-on:click="removeTodo(index)">X</span>
+        </div>
+      </template>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

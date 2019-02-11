@@ -1,0 +1,48 @@
+#app{
+    text-align: center
+}
+
+#app .mainTitle{
+    font-size: 36px;
+    color: brown;
+}
+
+#app .newArea{
+    padding: 1em 0;
+    background: #19555d;
+    color:#fff;
+    margin: 1em;
+    display: block;
+    max-width: 500px;
+    text-align: left;
+    position: relative;
+    margin: 1em auto;
+    padding-left: 15px;
+}
+
+#app .newArea .deleteBtn{
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+    position: absolute;
+    right: 15px;
+}
+#app .inputArea input{
+    text-indent: 5px;
+}
+
+#app .btn{
+        border: none;
+        cursor: pointer;
+        padding: 3px 7px;
+}
+
+#app .btn.add{
+    background-color: #408140;
+    color: #fff
+}
+
+#app .btn.clearAll{
+    color: #fff;
+    background-color: #e81616;
+}
